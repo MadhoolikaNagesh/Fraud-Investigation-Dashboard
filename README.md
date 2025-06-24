@@ -39,3 +39,4 @@ Location
 Device ID
 
 IP Address
+![image](https://github.com/user-attachments/assets/d21d0ef0-12ca-4da6-a489-fac9b24df950)
