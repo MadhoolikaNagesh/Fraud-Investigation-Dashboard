@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suspicious Transactions Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Flagged Suspicious Transactions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>User ID</th>
+                <th>Timestamp</th>
+                <th>Amount</th>
+                <th>Location</th>
+                <th>Device ID</th>
+                <th>IP Address</th>
+                <th>Reason</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for txn in transactions %}
+            <tr>
+                <td>{{ txn.transaction_id }}</td>
+                <td>{{ txn.user_id }}</td>
+                <td>{{ txn.timestamp }}</td>
+                <td>{{ txn.amount }}</td>
+                <td>{{ txn.location }}</td>
+                <td>{{ txn.device_id }}</td>
+                <td>{{ txn.ip_address }}</td>
+                <td>{{ txn.reason }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
